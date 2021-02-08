@@ -26,6 +26,8 @@ const Search = () => {
 		}, 500);
 	}, [term]);
 
+	// TODO: finish timeout
+
 	const renderedResults = results.map((result) => {
 		return (
 			<div className="item" key={result.pageid}>
