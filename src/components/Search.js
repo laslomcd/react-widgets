@@ -24,9 +24,11 @@ const Search = () => {
 				search();
 			}
 		}, 500);
-	}, [term]);
 
-	// TODO: finish timeout
+		return () => {
+			clearTimeout(timeoutId);
+		};
+	}, [term]);
 
 	const renderedResults = results.map((result) => {
 		return (
