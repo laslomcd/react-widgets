@@ -15,6 +15,8 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 		);
 	});
 
+	// TODO: close dropdown on click outside of component
+
 	return (
 		<div className="ui form">
 			<div className="field">
