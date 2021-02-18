@@ -9,8 +9,10 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 			if (ref.current.contains(event.target)) {
 				return;
 			}
+
 			setOpen(false);
 		};
+
 		document.body.addEventListener("click", onBodyClick);
 
 		return () => {
@@ -24,7 +26,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 		}
 
 		return (
-			<div key={option.value} onClick={() => onSelectedChange(option)} className="item">
+			<div key={option.value} className="item" onClick={() => onSelectedChange(option)}>
 				{option.label}
 			</div>
 		);
