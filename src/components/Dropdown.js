@@ -6,6 +6,9 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 
 	useEffect(() => {
 		const onBodyClick = (event) => {
+			if (!ref || ref.current === null) {
+				return;
+			}
 			if (ref.current.contains(event.target)) {
 				return;
 			}
